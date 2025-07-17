@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1FE4D3F6-4CEB-4B54-BC24-512F8F93FB2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "src\Core\Core.csproj", "{F800DCF9-70B2-4321-A526-0CE5F7EF5934}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{D50652E5-C3DB-412E-84CD-F276FBD62A85}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{B6CD02A1-8BCA-4832-B5B3-8C69F2C2A251}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginFramework", "src\Plugins\PluginFramework\PluginFramework.csproj", "{9A1922DC-B43F-4837-93BA-4E42BFA3F10F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NmeaPlugin", "src\Plugins\NmeaPlugin\NmeaPlugin.csproj", "{9C70F4F6-AADA-4DAB-A6F8-CC61C43979BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GpsTelemetryServer", "src\GpsTelemetryServer\GpsTelemetryServer.csproj", "{108F5F35-660A-46C9-8FDB-9FEE119A9F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F800DCF9-70B2-4321-A526-0CE5F7EF5934}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F800DCF9-70B2-4321-A526-0CE5F7EF5934}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F800DCF9-70B2-4321-A526-0CE5F7EF5934}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F800DCF9-70B2-4321-A526-0CE5F7EF5934}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D50652E5-C3DB-412E-84CD-F276FBD62A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50652E5-C3DB-412E-84CD-F276FBD62A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50652E5-C3DB-412E-84CD-F276FBD62A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50652E5-C3DB-412E-84CD-F276FBD62A85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A1922DC-B43F-4837-93BA-4E42BFA3F10F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A1922DC-B43F-4837-93BA-4E42BFA3F10F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A1922DC-B43F-4837-93BA-4E42BFA3F10F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A1922DC-B43F-4837-93BA-4E42BFA3F10F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C70F4F6-AADA-4DAB-A6F8-CC61C43979BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C70F4F6-AADA-4DAB-A6F8-CC61C43979BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C70F4F6-AADA-4DAB-A6F8-CC61C43979BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C70F4F6-AADA-4DAB-A6F8-CC61C43979BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{108F5F35-660A-46C9-8FDB-9FEE119A9F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{108F5F35-660A-46C9-8FDB-9FEE119A9F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{108F5F35-660A-46C9-8FDB-9FEE119A9F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{108F5F35-660A-46C9-8FDB-9FEE119A9F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F800DCF9-70B2-4321-A526-0CE5F7EF5934} = {1FE4D3F6-4CEB-4B54-BC24-512F8F93FB2C}
+		{D50652E5-C3DB-412E-84CD-F276FBD62A85} = {1FE4D3F6-4CEB-4B54-BC24-512F8F93FB2C}
+		{B6CD02A1-8BCA-4832-B5B3-8C69F2C2A251} = {1FE4D3F6-4CEB-4B54-BC24-512F8F93FB2C}
+		{9A1922DC-B43F-4837-93BA-4E42BFA3F10F} = {B6CD02A1-8BCA-4832-B5B3-8C69F2C2A251}
+		{9C70F4F6-AADA-4DAB-A6F8-CC61C43979BA} = {B6CD02A1-8BCA-4832-B5B3-8C69F2C2A251}
+		{108F5F35-660A-46C9-8FDB-9FEE119A9F0A} = {1FE4D3F6-4CEB-4B54-BC24-512F8F93FB2C}
+	EndGlobalSection
+EndGlobal
