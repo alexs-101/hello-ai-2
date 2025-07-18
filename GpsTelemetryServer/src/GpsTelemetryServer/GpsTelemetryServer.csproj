@@ -25,6 +25,16 @@
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
     <ProjectReference Include="..\Plugins\PluginFramework\PluginFramework.csproj" />
+    <ProjectReference Include="..\Plugins\NmeaPlugin\NmeaPlugin.csproj" />
   </ItemGroup>
+
+  <!-- Copy plugins to output directory -->
+  <Target Name="CopyPlugins" AfterTargets="Build">
+    <ItemGroup>
+      <PluginFiles Include="..\Plugins\NmeaPlugin\bin\$(Configuration)\net8.0\NmeaPlugin.dll" />
+      <PluginFiles Include="..\Plugins\NmeaPlugin\bin\$(Configuration)\net8.0\NmeaPlugin.pdb" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PluginFiles)" DestinationFolder="$(OutputPath)plugins" />
+  </Target>
 
 </Project>

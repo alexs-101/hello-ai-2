@@ -115,3 +115,866 @@ System.Threading.Channels.ChannelClosedException: The channel has been closed.
 2025-07-18 04:33:04.614 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
 2025-07-18 04:33:04.712 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
 2025-07-18 04:33:04.721 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 04:39:46.482 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 04:39:46.627 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 04:39:46.633 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 04:39:46.637 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 04:39:46.692 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 04:39:46.693 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 04:39:46.694 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 04:39:46.710 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 04:39:46.712 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 04:39:46.712 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 04:39:46.712 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 04:39:46.717 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 04:39:46.718 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 04:39:46.719 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 04:39:46.797 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 04:39:46.798 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 04:39:46.798 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 04:39:46.798 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 04:39:47.722 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 04:40:16.655 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT) [FAIL]
+2025-07-18 04:40:16.660 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT)
+2025-07-18 04:40:16.668 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 04:40:17.727 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:40:47.337 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:40:47.338 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:40:48.325 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:41:17.397 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30032ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:41:17.398 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30032ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:41:18.321 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:41:48.569 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30045ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:41:48.571 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30045ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:41:48.950 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:42:18.952 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:42:19.016 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30029ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:42:19.017 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30029ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:42:48.950 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:42:49.130 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30043ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:42:49.131 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30043ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:43:19.479 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:43:20.195 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:43:20.196 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:43:49.478 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:43:50.641 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30050ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:43:50.641 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30050ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:44:20.123 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:44:21.407 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:44:21.408 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:44:50.123 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:44:51.949 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30052ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:44:51.950 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30052ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:45:20.679 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:45:22.561 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:45:22.561 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:45:50.685 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:45:53.037 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30111ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:45:53.037 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30111ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:46:13.325 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:46:13.325 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:46:20.678 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:46:23.184 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30075ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:46:23.185 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30075ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:46:32.403 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:46:32.403 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:46:51.326 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:46:51.566 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:46:51.566 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:46:54.333 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:46:54.334 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:47:21.324 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:47:24.700 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:47:24.701 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:47:51.327 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:47:55.587 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30092ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:47:55.587 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30092ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:48:21.959 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:48:26.100 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:48:26.101 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:48:52.586 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:48:57.044 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:48:57.045 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:49:23.225 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:49:27.910 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:49:27.911 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:49:53.892 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:49:59.105 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:49:59.105 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:50:17.183 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 04:50:17.185 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 04:50:17.229 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 04:50:17.230 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 04:50:17.238 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 04:50:17.238 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 04:50:17.239 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 04:50:17.239 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 04:50:17.241 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 04:50:17.242 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 04:50:17.244 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 04:50:17.262 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 04:50:17.271 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 04:50:17.271 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 04:50:17.271 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 04:50:17.272 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 04:50:17.275 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 04:50:17.276 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 04:50:17.338 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 04:50:17.342 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 04:50:20.871 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 04:50:20.996 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 04:50:21.003 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 04:50:21.008 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 04:50:21.064 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 04:50:21.064 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 04:50:21.065 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 04:50:21.079 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 04:50:21.081 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 04:50:21.082 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 04:50:21.082 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 04:50:21.089 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 04:50:21.089 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 04:50:21.090 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 04:50:21.163 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 04:50:21.163 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 04:50:21.163 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 04:50:21.164 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 04:50:22.096 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 04:50:51.022 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT) [FAIL]
+2025-07-18 04:50:51.024 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT)
+2025-07-18 04:50:51.026 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 04:50:52.101 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:51:15.520 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:51:15.520 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:51:21.862 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30118ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:51:21.863 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30118ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:51:22.781 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:51:45.768 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:51:45.769 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 04:51:53.086 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:51:53.087 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:51:53.524 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:52:24.216 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 04:52:24.227 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 04:52:24.228 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 04:52:37.811 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 04:52:37.812 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 04:52:37.841 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 04:52:37.843 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 04:52:37.851 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 04:52:37.852 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 04:52:37.853 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 04:52:37.853 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 04:52:37.855 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 04:52:37.857 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 04:52:37.860 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 04:52:37.880 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 04:52:37.888 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 04:52:37.888 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 04:52:37.888 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 04:52:37.889 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 04:52:37.890 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 04:52:37.892 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 04:52:37.973 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 04:52:37.975 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 04:59:58.844 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 04:59:59.072 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 04:59:59.079 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 04:59:59.087 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 04:59:59.190 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 04:59:59.191 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 04:59:59.192 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 04:59:59.214 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 04:59:59.217 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 04:59:59.218 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 04:59:59.218 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 04:59:59.224 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 04:59:59.226 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 04:59:59.226 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 04:59:59.366 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 04:59:59.369 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 04:59:59.370 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 04:59:59.370 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:00:00.228 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:00:29.110 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT) [FAIL]
+2025-07-18 05:00:29.112 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT)
+2025-07-18 05:00:29.115 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:00:30.234 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:00:59.701 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30027ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:00:59.702 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30027ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:01:00.755 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:01:30.231 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30065ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:01:30.233 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30065ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:01:30.755 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:02:01.249 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:02:01.250 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:02:01.285 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:02:31.959 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:02:31.997 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30032ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:02:31.997 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30032ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:03:02.578 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:03:03.136 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30030ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:03:03.136 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30030ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:03:32.578 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:03:33.616 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:03:33.617 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:04:03.123 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:04:04.252 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:04:04.253 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed)
+rs...
+2025-07-18 05:03:52.574 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:03:52.591 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:03:52.594 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:03:52.594 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:03:52.595 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:03:52.600 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:03:52.601 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:03:52.602 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:03:52.722 +04:00 [ERR] Microsoft.Extensions.Hosting.Internal.Host: Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5189: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Address already in use
+ ---> System.Net.Sockets.SocketException (98): Address already in use
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-07-18 05:03:52.789 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:03:52.790 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:03:52.793 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:03:52.794 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:03:52.795 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:03:52.795 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:03:52.810 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:03:52.816 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:03:52.818 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:03:52.849 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:03:52.852 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:04:30.243 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:04:30.397 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:04:30.403 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:04:30.408 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:04:30.492 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:04:30.493 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:04:30.494 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:04:30.515 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:04:30.518 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:04:30.519 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:04:30.519 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:04:30.524 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:04:30.526 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:04:30.526 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:04:30.653 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:04:30.654 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:04:30.654 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:04:30.655 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:04:31.528 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:05:00.431 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30042ms in state CONNECT) [FAIL]
+2025-07-18 05:05:00.432 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30042ms in state CONNECT)
+2025-07-18 05:05:00.436 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:05:01.534 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:05:31.031 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30031ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:05:31.035 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30031ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:05:32.056 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:06:01.537 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:06:01.538 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:06:02.057 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:06:32.140 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:06:32.140 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:06:32.615 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:07:03.182 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:07:03.186 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30031ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:07:03.187 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30031ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:07:04.059 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 05:07:04.059 +04:00 [WRN] Core.Services.TelemetryProcessor: No plugin found to handle data for device GPRMC
+2025-07-18 05:07:33.179 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:07:33.285 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30050ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:07:33.286 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30050ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:08:03.177 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:08:03.370 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30050ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:08:03.371 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30050ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:08:33.728 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:08:34.459 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:08:34.459 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:09:04.477 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:09:05.654 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:09:05.656 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30044ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:09:34.477 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:09:35.699 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30042ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:09:35.699 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30042ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:10:04.476 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:10:05.874 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30071ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:10:05.875 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30071ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:10:35.045 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:10:36.548 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:10:36.549 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:10:50.685 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:10:50.686 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:10:50.700 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:10:50.700 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:10:50.705 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:10:50.705 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:10:50.705 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:10:50.705 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:10:50.707 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:10:50.708 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:10:50.709 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:10:50.722 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:10:50.730 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:10:50.730 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:10:50.730 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:10:50.732 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:10:50.734 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:10:50.735 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:10:50.767 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:10:50.769 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:11:15.412 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:11:15.550 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:11:15.556 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:11:15.560 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:11:15.616 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:11:15.617 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:11:15.618 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:11:15.634 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:11:15.636 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:11:15.636 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:11:15.637 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:11:15.642 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:11:15.643 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:11:15.643 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:11:15.721 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:11:15.721 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:11:15.721 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:11:15.721 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:11:16.649 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:11:45.584 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30040ms in state CONNECT) [FAIL]
+2025-07-18 05:11:45.588 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30040ms in state CONNECT)
+2025-07-18 05:11:45.597 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:11:46.660 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:12:16.184 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:12:16.186 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:12:17.181 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:12:38.940 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:12:38.943 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:12:38.987 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:12:38.988 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:12:38.990 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:12:38.991 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:12:38.992 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:12:38.992 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:12:38.993 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:12:38.995 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:12:38.997 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:12:39.007 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:12:39.012 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:12:39.013 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:12:39.013 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:12:39.013 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:12:39.015 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:12:39.017 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:12:39.064 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:12:39.066 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:12:43.909 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:12:44.039 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:12:44.045 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:12:44.049 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:12:44.126 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:12:44.126 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:12:44.127 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:12:44.142 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:12:44.144 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:12:44.145 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:12:44.146 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:12:44.151 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:12:44.152 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:12:44.152 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:12:44.228 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:12:44.228 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:12:44.229 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:12:44.229 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:12:45.155 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:13:14.713 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT) [FAIL]
+2025-07-18 05:13:14.717 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT)
+2025-07-18 05:13:14.725 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:13:15.812 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:13:44.790 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30041ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:13:44.792 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30041ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:13:44.960 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:13:44.961 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:13:44.975 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:13:44.976 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:13:44.978 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:13:44.979 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:13:44.979 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:13:44.980 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:13:44.981 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:13:44.984 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:13:44.985 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:13:44.994 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:13:45.003 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:13:45.003 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:13:45.003 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:13:45.004 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:13:45.005 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:13:45.006 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:13:45.105 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:13:45.108 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+rastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-07-18 05:13:32.693 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:13:32.693 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:13:32.699 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:13:32.700 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:13:32.701 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:13:32.701 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:13:32.704 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:13:32.708 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:13:32.708 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:13:32.776 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:13:32.778 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:13:48.530 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:13:48.662 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:13:48.667 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:13:48.672 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:13:48.726 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:13:48.727 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:13:48.728 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:13:48.746 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:13:48.748 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:13:48.748 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:13:48.748 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:13:48.754 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:13:48.755 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:13:48.755 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:13:48.836 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:13:48.837 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:13:48.837 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:13:48.837 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:13:49.759 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:14:19.299 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT) [FAIL]
+2025-07-18 05:14:19.311 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT)
+2025-07-18 05:14:19.324 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:14:20.367 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:14:49.839 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:14:49.840 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:14:50.834 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:15:20.959 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:15:20.960 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:15:21.455 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:15:51.457 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:15:51.461 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:15:51.462 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:16:21.458 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:16:21.554 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30051ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:16:21.555 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30051ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:16:52.011 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:16:52.178 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30041ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:16:52.178 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30041ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:17:22.776 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:17:23.477 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:17:23.478 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:17:52.773 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:17:53.921 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:17:53.922 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:18:22.775 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:18:24.082 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30062ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:18:24.083 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30062ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:18:53.366 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:18:54.730 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30030ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:18:54.730 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30030ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:19:24.054 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:19:25.952 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:19:25.954 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:19:54.049 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:19:56.341 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:19:56.342 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:20:24.049 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:20:26.399 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30043ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:20:26.399 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30043ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:20:54.051 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:20:56.673 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:20:56.674 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:21:24.771 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:21:27.936 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:21:27.937 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30046ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:21:55.250 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:21:58.665 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30032ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:21:58.666 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30032ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:22:25.929 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:22:29.636 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:22:29.637 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30037ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:22:56.624 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:23:00.372 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:23:00.372 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30033ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:23:27.218 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:23:31.484 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30031ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:23:31.484 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30031ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:23:57.924 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:24:02.443 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:24:02.446 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:24:28.571 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:24:33.392 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:24:33.393 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30034ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:24:58.567 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:25:04.616 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:25:04.616 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30039ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:25:29.264 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:25:34.848 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:25:34.848 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:25:59.263 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:26:05.169 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30049ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:26:05.170 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30049ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:26:29.264 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:26:35.225 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30040ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:26:35.227 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30040ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:26:59.260 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:27:05.271 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30041ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:27:05.272 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30041ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:27:29.826 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:27:36.366 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30045ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:27:36.367 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30045ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:28:00.287 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:28:06.914 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:28:06.915 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:28:06.926 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:28:06.926 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:28:06.929 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:28:06.929 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:28:06.930 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:28:06.930 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:28:06.932 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:28:06.934 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:28:06.936 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:28:06.946 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:28:06.952 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:28:06.952 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:28:06.952 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:28:06.953 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:28:06.954 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:28:06.954 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:28:06.993 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30029ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:28:06.993 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30029ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:28:06.995 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:28:06.997 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+nnectionManager: UDP server stopped
+2025-07-18 05:25:18.712 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:25:18.714 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:25:18.714 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:25:18.796 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:25:18.798 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:25:59.615 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:25:59.743 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:25:59.749 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:25:59.754 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:25:59.806 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:25:59.807 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:25:59.808 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./plugins
+2025-07-18 05:25:59.821 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 0 plugins
+2025-07-18 05:25:59.824 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:25:59.824 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:25:59.836 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:25:59.837 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:25:59.838 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:25:59.838 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:25:59.842 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:25:59.843 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:25:59.843 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:25:59.923 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5190
+2025-07-18 05:25:59.924 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:25:59.924 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:25:59.924 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:26:00.846 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:27:32.506 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:27:32.626 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:27:32.632 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:27:32.636 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:27:32.687 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:27:32.688 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:27:32.689 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./plugins
+2025-07-18 05:27:32.690 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 0 plugins
+2025-07-18 05:27:32.692 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:27:32.692 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:27:32.704 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:27:32.705 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:27:32.705 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:27:32.706 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:27:32.709 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:27:32.710 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:27:32.710 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:27:32.782 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5191
+2025-07-18 05:27:32.782 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:27:32.782 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:27:32.782 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:27:33.712 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:29:10.876 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:29:10.992 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:29:10.998 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:29:11.002 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:29:11.054 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:29:11.055 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:29:11.056 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./plugins
+2025-07-18 05:29:11.057 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 0 plugins
+2025-07-18 05:29:11.059 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:29:11.060 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:29:11.072 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:29:11.073 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:29:11.074 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:29:11.074 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:29:11.082 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:29:11.083 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:29:11.083 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:29:11.156 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:29:11.156 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:29:11.157 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:29:11.157 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:29:12.084 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:29:41.022 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT) [FAIL]
+2025-07-18 05:29:41.025 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30035ms in state CONNECT)
+2025-07-18 05:29:41.030 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:29:42.100 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:30:11.661 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30045ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:30:11.662 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30045ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:30:12.645 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:30:42.170 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30040ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:30:42.171 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30040ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:30:42.645 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 0 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:31:36.488 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:31:36.607 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:31:36.614 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:31:36.618 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:31:36.671 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:31:36.672 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:31:36.673 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./bin/Debug/net8.0/plugins
+2025-07-18 05:31:36.677 +04:00 [ERR] PluginFramework.PluginManager: Failed to load plugin ./bin/Debug/net8.0/plugins/NmeaPlugin.dll
+System.ArgumentException: Path "./bin/Debug/net8.0/plugins/NmeaPlugin.dll" is not an absolute path. (Parameter 'assemblyPath')
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at PluginFramework.PluginManager.LoadPluginAsync(String pluginPath) in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Plugins/PluginFramework/PluginManager.cs:line 89
+   at PluginFramework.PluginManager.LoadPluginsAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Plugins/PluginFramework/PluginManager.cs:line 44
+2025-07-18 05:31:36.683 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 0 plugins
+2025-07-18 05:31:36.686 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:31:36.686 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:31:36.699 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:31:36.701 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:31:36.701 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:31:36.701 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:31:36.705 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:31:36.706 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:31:36.706 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:31:36.779 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:31:36.779 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:31:36.779 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:31:36.779 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:31:37.708 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:31:46.185 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:31:46.186 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:31:46.195 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:31:46.196 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:31:46.198 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:31:46.198 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:31:46.199 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:31:46.199 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:31:46.200 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:31:46.202 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:31:46.204 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:31:46.204 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:31:46.206 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:31:46.227 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:31:46.227 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:31:46.227 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:31:46.227 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:31:46.228 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:31:46.229 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:31:46.239 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:31:46.240 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:32:03.921 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:32:04.034 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:32:04.041 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:32:04.045 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:32:04.093 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:32:04.094 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:32:04.095 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./bin/Debug/net8.0/plugins
+2025-07-18 05:32:04.100 +04:00 [ERR] PluginFramework.PluginManager: Failed to load plugin ./bin/Debug/net8.0/plugins/NmeaPlugin.dll
+System.ArgumentException: Path "./bin/Debug/net8.0/plugins/NmeaPlugin.dll" is not an absolute path. (Parameter 'assemblyPath')
+   at System.Runtime.Loader.AssemblyLoadContext.LoadFromAssemblyPath(String assemblyPath)
+   at PluginFramework.PluginManager.LoadPluginAsync(String pluginPath) in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Plugins/PluginFramework/PluginManager.cs:line 89
+   at PluginFramework.PluginManager.LoadPluginsAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Plugins/PluginFramework/PluginManager.cs:line 44
+2025-07-18 05:32:04.106 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 0 plugins
+2025-07-18 05:32:04.108 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:32:04.108 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:32:04.121 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:32:04.123 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:32:04.123 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:32:04.123 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:32:04.132 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:32:04.133 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:32:04.133 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:32:04.207 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:32:04.207 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:32:04.207 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:32:04.207 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:32:05.135 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:32:13.086 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:32:13.087 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:32:13.108 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:32:13.108 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:32:13.111 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:32:13.111 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:32:13.112 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:32:13.112 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:32:13.113 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:32:13.116 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:32:13.118 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:32:13.118 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:32:13.120 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:32:13.143 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:32:13.143 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:32:13.143 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:32:13.144 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:32:13.144 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:32:13.145 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:32:13.248 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:32:13.249 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:32:34.222 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:32:34.339 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:32:34.344 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:32:34.348 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:32:34.397 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:32:34.398 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:32:34.399 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./bin/Debug/net8.0/plugins
+2025-07-18 05:32:34.402 +04:00 [INF] PluginFramework.PluginManager: Loaded plugin NMEA 0183 Protocol Plugin v1.0.0 for protocol "Nmea"
+2025-07-18 05:32:34.404 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 1 plugins
+2025-07-18 05:32:34.404 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loaded plugin: NMEA 0183 Protocol Plugin v1.0.0 for protocol "Nmea"
+2025-07-18 05:32:34.405 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:32:34.405 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:32:34.418 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:32:34.419 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:32:34.419 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:32:34.419 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:32:34.423 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:32:34.424 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:32:34.424 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:32:34.494 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:32:34.494 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:32:34.494 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:32:34.494 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:32:35.426 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:32:43.422 +04:00 [INF] Microsoft.Hosting.Lifetime: Application is shutting down...
+2025-07-18 05:32:43.424 +04:00 [INF] : GPS Telemetry Server is shutting down...
+2025-07-18 05:32:43.459 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping...
+2025-07-18 05:32:43.460 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:32:43.463 +04:00 [INF] Core.Services.ConnectionManager: TCP Server stopped
+2025-07-18 05:32:43.463 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:32:43.464 +04:00 [INF] Core.Services.ConnectionManager: UDP Server stopped
+2025-07-18 05:32:43.464 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:32:43.466 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:32:43.468 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor stopped
+2025-07-18 05:32:43.470 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:32:43.471 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopped successfully
+2025-07-18 05:32:43.477 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service stopping due to cancellation
+2025-07-18 05:32:43.497 +04:00 [INF] Core.Services.ConnectionManager: Stopping connection manager
+2025-07-18 05:32:43.497 +04:00 [INF] Core.Services.ConnectionManager: TCP server stopped
+2025-07-18 05:32:43.497 +04:00 [INF] Core.Services.ConnectionManager: UDP server stopped
+2025-07-18 05:32:43.498 +04:00 [INF] Core.Services.TelemetryProcessor: Stopping telemetry processor
+2025-07-18 05:32:43.499 +04:00 [ERR] Core.Services.TelemetryProcessor: Error stopping telemetry processor
+System.Threading.Channels.ChannelClosedException: The channel has been closed.
+   at System.Threading.Channels.ChannelWriter`1.Complete(Exception error)
+   at Core.Services.TelemetryProcessor.StopAsync() in /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/Core/Services/TelemetryProcessor.cs:line 186
+2025-07-18 05:32:43.500 +04:00 [INF] Core.Services.KafkaPublisher: Disposing Kafka publisher
+2025-07-18 05:32:43.562 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher disposed
+2025-07-18 05:32:43.563 +04:00 [INF] PluginFramework.PluginManager: Shutting down plugin manager
+2025-07-18 05:34:24.868 +04:00 [INF] : Starting GPS Telemetry Server...
+2025-07-18 05:34:25.115 +04:00 [INF] Core.Services.KafkaPublisher: Kafka publisher initialized with bootstrap servers: localhost:9092
+2025-07-18 05:34:25.122 +04:00 [INF] Core.Services.TelemetryProcessor: Starting telemetry message processing loop
+2025-07-18 05:34:25.129 +04:00 [INF] Core.Services.TelemetryProcessor: Telemetry processor initialized
+2025-07-18 05:34:25.227 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: GPS Telemetry Background Service starting...
+2025-07-18 05:34:25.229 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loading plugins...
+2025-07-18 05:34:25.231 +04:00 [INF] PluginFramework.PluginManager: Loading plugins from ./bin/Debug/net8.0/plugins
+2025-07-18 05:34:25.237 +04:00 [INF] PluginFramework.PluginManager: Loaded plugin NMEA 0183 Protocol Plugin v1.0.0 for protocol "Nmea"
+2025-07-18 05:34:25.240 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Successfully loaded 1 plugins
+2025-07-18 05:34:25.241 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Loaded plugin: NMEA 0183 Protocol Plugin v1.0.0 for protocol "Nmea"
+2025-07-18 05:34:25.242 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting connection managers...
+2025-07-18 05:34:25.243 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting TCP server on port 8080
+2025-07-18 05:34:25.264 +04:00 [INF] Core.Services.ConnectionManager: TCP Server started on 0.0.0.0:8080
+2025-07-18 05:34:25.267 +04:00 [INF] Core.Services.ConnectionManager: TCP server started on port 8080
+2025-07-18 05:34:25.268 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: TCP server started successfully on port 8080
+2025-07-18 05:34:25.269 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting UDP server on port 8081
+2025-07-18 05:34:25.276 +04:00 [INF] Core.Services.ConnectionManager: UDP Server started on 0.0.0.0:8081
+2025-07-18 05:34:25.278 +04:00 [INF] Core.Services.ConnectionManager: UDP server started on port 8081
+2025-07-18 05:34:25.278 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: UDP server started successfully on port 8081
+2025-07-18 05:34:25.414 +04:00 [INF] Microsoft.Hosting.Lifetime: Now listening on: http://localhost:5189
+2025-07-18 05:34:25.417 +04:00 [INF] Microsoft.Hosting.Lifetime: Application started. Press Ctrl+C to shut down.
+2025-07-18 05:34:25.418 +04:00 [INF] Microsoft.Hosting.Lifetime: Hosting environment: Development
+2025-07-18 05:34:25.418 +04:00 [INF] Microsoft.Hosting.Lifetime: Content root path: /home/wolf/work/hello-ai-2/GpsTelemetryServer/GpsTelemetryServer/src/GpsTelemetryServer
+2025-07-18 05:34:26.282 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Starting health monitoring...
+2025-07-18 05:34:46.956 +04:00 [WRN] Core.Services.TelemetryProcessor: Invalid GPS data for device GPRMC: GPS timestamp is outside acceptable range
+2025-07-18 05:34:46.956 +04:00 [WRN] Core.Services.TelemetryProcessor: Invalid GPS data for device GPRMC: GPS timestamp is outside acceptable range
+2025-07-18 05:34:55.194 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30087ms in state CONNECT) [FAIL]
+2025-07-18 05:34:55.197 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30087ms in state CONNECT)
+2025-07-18 05:34:55.201 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_AllBrokersDown" - 1/1 brokers are down
+2025-07-18 05:34:56.287 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:35:25.803 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:35:25.804 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30038ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:35:26.805 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:35:32.610 +04:00 [WRN] Core.Services.TelemetryProcessor: Invalid GPS data for device GPRMC: GPS timestamp is outside acceptable range
+2025-07-18 05:35:32.611 +04:00 [WRN] Core.Services.TelemetryProcessor: Invalid GPS data for device GPRMC: GPS timestamp is outside acceptable range
+2025-07-18 05:35:40.337 +04:00 [WRN] Core.Services.TelemetryProcessor: Invalid GPS data for device GPRMC: GPS timestamp is outside acceptable range
+2025-07-18 05:35:40.337 +04:00 [WRN] Core.Services.TelemetryProcessor: Invalid GPS data for device GPRMC: GPS timestamp is outside acceptable range
+2025-07-18 05:35:56.346 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30080ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:35:56.347 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30080ms in state CONNECT, 1 identical error(s) suppressed)
+2025-07-18 05:35:56.804 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:36:27.376 +04:00 [INF] GpsTelemetryServer.Services.TelemetryBackgroundService: Connection Statistics - TCP: 1 active, UDP: 1 active, Total Messages: 0, Messages/sec: 0.00
+2025-07-18 05:36:27.383 +04:00 [WRN] Core.Services.KafkaPublisher: Kafka: [thrd:localhost:9092/bootstrap]: localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed) [FAIL]
+2025-07-18 05:36:27.384 +04:00 [ERR] Core.Services.KafkaPublisher: Kafka producer error: "Local_Transport" - localhost:9092/bootstrap: Connection setup timed out in state CONNECT (after 30036ms in state CONNECT, 1 identical error(s) suppressed)

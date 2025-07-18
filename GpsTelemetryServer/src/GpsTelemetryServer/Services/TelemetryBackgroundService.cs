@@ -13,6 +13,7 @@ public class TelemetryBackgroundService : BackgroundService
     private readonly ConnectionManager _connectionManager;
     private readonly ITelemetryProcessor _telemetryProcessor;
     private readonly IKafkaPublisher _kafkaPublisher;
+    private readonly IPluginManager _pluginManager;
     private readonly TelemetryServerOptions _options;
 
     public TelemetryBackgroundService(
@@ -20,12 +21,14 @@ public class TelemetryBackgroundService : BackgroundService
         ConnectionManager connectionManager,
         ITelemetryProcessor telemetryProcessor,
         IKafkaPublisher kafkaPublisher,
+        IPluginManager pluginManager,
         IOptions<TelemetryServerOptions> options)
     {
         _logger = logger;
         _connectionManager = connectionManager;
         _telemetryProcessor = telemetryProcessor;
         _kafkaPublisher = kafkaPublisher;
+        _pluginManager = pluginManager;
         _options = options.Value;
     }
 
@@ -35,6 +38,9 @@ public class TelemetryBackgroundService : BackgroundService
 
         try
         {
+            // Load plugins first
+            await LoadPluginsAsync(stoppingToken);
+
             // Start connection managers
             await StartConnectionManagersAsync(stoppingToken);
 
@@ -48,6 +54,30 @@ public class TelemetryBackgroundService : BackgroundService
         catch (Exception ex)
         {
             _logger.LogCritical(ex, "Fatal error in GPS Telemetry Background Service");
+            throw;
+        }
+    }
+
+    private async Task LoadPluginsAsync(CancellationToken cancellationToken)
+    {
+        _logger.LogInformation("Loading plugins...");
+        
+        try
+        {
+            var plugins = await _pluginManager.LoadPluginsAsync();
+            var pluginCount = plugins.Count();
+            
+            _logger.LogInformation("Successfully loaded {PluginCount} plugins", pluginCount);
+            
+            foreach (var plugin in plugins)
+            {
+                _logger.LogInformation("Loaded plugin: {PluginName} v{Version} for protocol {Protocol}",
+                    plugin.Name, plugin.Version, plugin.SupportedProtocol);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Error loading plugins");
             throw;
         }
     }
@@ -171,6 +201,9 @@ public class TelemetryBackgroundService : BackgroundService
             
             // Flush Kafka publisher
             await _kafkaPublisher.FlushAsync(TimeSpan.FromSeconds(30));
+            
+            // Shutdown plugins
+            await _pluginManager.ShutdownAsync();
             
             _logger.LogInformation("GPS Telemetry Background Service stopped successfully");
         }

@@ -32,17 +32,47 @@ public class PluginManager : IPluginManager, IDisposable
     {
         _logger.LogInformation("Loading plugins from {Directory}", _pluginDirectory);
         
-        var pluginFiles = Directory.GetFiles(_pluginDirectory, "*.dll");
-        
-        foreach (var pluginFile in pluginFiles)
+        // Load plugins from directory
+        if (Directory.Exists(_pluginDirectory))
         {
-            try
+            var pluginFiles = Directory.GetFiles(_pluginDirectory, "*.dll");
+            
+            foreach (var pluginFile in pluginFiles)
             {
-                await LoadPluginAsync(pluginFile);
+                try
+                {
+                    var absolutePath = Path.GetFullPath(pluginFile);
+                    await LoadPluginAsync(absolutePath);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Failed to load plugin {PluginFile}", pluginFile);
+                }
             }
-            catch (Exception ex)
+        }
+        
+        // Load plugins from configured paths
+        var pluginPaths = _configuration.GetSection("PluginSettings:PluginPaths").Get<string[]>();
+        if (pluginPaths != null)
+        {
+            foreach (var pluginPath in pluginPaths)
             {
-                _logger.LogError(ex, "Failed to load plugin {PluginFile}", pluginFile);
+                var absolutePath = Path.GetFullPath(pluginPath);
+                if (File.Exists(absolutePath))
+                {
+                    try
+                    {
+                        await LoadPluginAsync(absolutePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        _logger.LogError(ex, "Failed to load plugin {PluginPath}", absolutePath);
+                    }
+                }
+                else
+                {
+                    _logger.LogWarning("Plugin file not found: {PluginPath}", absolutePath);
+                }
             }
         }
 
