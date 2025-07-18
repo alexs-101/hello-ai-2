@@ -12,6 +12,8 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.7" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.7" />
     <PackageReference Include="NetCoreServer" Version="8.0.7" />
+    <PackageReference Include="OpenTelemetry" Version="1.9.0" />
+    <PackageReference Include="Polly" Version="8.4.1" />
     <PackageReference Include="System.Threading.Channels" Version="9.0.7" />
   </ItemGroup>
 

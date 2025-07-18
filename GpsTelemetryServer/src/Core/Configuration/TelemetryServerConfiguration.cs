@@ -66,3 +66,40 @@ public class PrometheusExporter
     public string Endpoint { get; set; } = "/metrics";
     public int Port { get; set; } = 9090;
 }
+
+public class ResilienceOptions
+{
+    public KafkaResilienceOptions Kafka { get; set; } = new();
+    public MessageProcessingResilienceOptions MessageProcessing { get; set; } = new();
+    public ConnectionResilienceOptions Connection { get; set; } = new();
+}
+
+public class KafkaResilienceOptions
+{
+    public int MaxRetryAttempts { get; set; } = 3;
+    public int BaseDelayMs { get; set; } = 1000;
+    public int MaxDelaySeconds { get; set; } = 30;
+    public int TimeoutSeconds { get; set; } = 30;
+    public double CircuitBreakerFailureRatio { get; set; } = 0.5;
+    public int CircuitBreakerSamplingDurationSeconds { get; set; } = 60;
+    public int CircuitBreakerMinimumThroughput { get; set; } = 10;
+    public int CircuitBreakerBreakDurationSeconds { get; set; } = 30;
+}
+
+public class MessageProcessingResilienceOptions
+{
+    public int MaxRetryAttempts { get; set; } = 2;
+    public int BaseDelayMs { get; set; } = 500;
+    public int TimeoutSeconds { get; set; } = 10;
+}
+
+public class ConnectionResilienceOptions
+{
+    public int MaxRetryAttempts { get; set; } = 5;
+    public int BaseDelayMs { get; set; } = 2000;
+    public int MaxDelaySeconds { get; set; } = 60;
+    public double CircuitBreakerFailureRatio { get; set; } = 0.7;
+    public int CircuitBreakerSamplingDurationSeconds { get; set; } = 120;
+    public int CircuitBreakerMinimumThroughput { get; set; } = 5;
+    public int CircuitBreakerBreakDurationSeconds { get; set; } = 60;
+}

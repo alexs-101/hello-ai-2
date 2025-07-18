@@ -5,6 +5,8 @@ using GpsTelemetryServer.Services;
 using GpsTelemetryServer.HealthChecks;
 using PluginFramework;
 using Serilog;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
 using OpenTelemetry.Extensions.Hosting;
 
 // Configure Server GC for high-throughput scenarios
@@ -48,12 +50,16 @@ builder.Services.Configure<ConnectionManagerOptions>(
     builder.Configuration.GetSection("ConnectionManager"));
 builder.Services.Configure<MonitoringOptions>(
     builder.Configuration.GetSection("Monitoring"));
+builder.Services.Configure<ResilienceOptions>(
+    builder.Configuration.GetSection("Resilience"));
 
 // Add core services
 builder.Services.AddSingleton<IPluginManager, PluginManager>();
 builder.Services.AddSingleton<ITelemetryProcessor, TelemetryProcessor>();
 builder.Services.AddSingleton<IKafkaPublisher, KafkaPublisher>();
 builder.Services.AddSingleton<ConnectionManager>();
+builder.Services.AddSingleton<IMetricsService, MetricsService>();
+builder.Services.AddSingleton<ResilienceService>();
 
 // Add background service
 builder.Services.AddHostedService<TelemetryBackgroundService>();
@@ -62,8 +68,25 @@ builder.Services.AddHostedService<TelemetryBackgroundService>();
 builder.Services.AddHealthChecks()
     .AddCheck<TelemetryHealthCheck>("telemetry");
 
-// Add OpenTelemetry (placeholder for full implementation)
-builder.Services.AddOpenTelemetry();
+// Configure OpenTelemetry
+var monitoringOptions = builder.Configuration.GetSection("Monitoring").Get<MonitoringOptions>() ?? new MonitoringOptions();
+
+if (monitoringOptions.EnableOpenTelemetry)
+{
+    builder.Services.AddOpenTelemetry()
+        .WithMetrics(metrics =>
+        {
+            metrics.AddMeter(monitoringOptions.ServiceName)
+                   .AddRuntimeInstrumentation()
+                   .AddHttpClientInstrumentation()
+                   .AddAspNetCoreInstrumentation();
+
+            if (monitoringOptions.Exporters.Console.Enabled)
+            {
+                metrics.AddConsoleExporter();
+            }
+        });
+}
 
 // Configure API endpoints
 builder.Services.AddControllers();
