@@ -1,0 +1,273 @@
+using Core.Models;
+using Microsoft.Extensions.Logging;
+using NmeaParser;
+using NmeaParser.Messages;
+using System.Text;
+
+namespace NmeaPlugin;
+
+public class NmeaParser
+{
+    private readonly ILogger<NmeaParser>? _logger;
+
+    public NmeaParser(ILogger<NmeaParser>? logger = null)
+    {
+        _logger = logger;
+    }
+
+    public static bool IsValidNmeaChecksum(string nmeaSentence)
+    {
+        if (string.IsNullOrEmpty(nmeaSentence) || !nmeaSentence.StartsWith("$"))
+            return false;
+
+        try
+        {
+            return NmeaMessage.IsValidChecksum(nmeaSentence);
+        }
+        catch
+        {
+            return false;
+        }
+    }
+
+    public async Task<GpsData?> ParseMultiSentenceAsync(string[] nmeaSentences, string deviceId)
+    {
+        if (nmeaSentences == null || nmeaSentences.Length == 0)
+            return null;
+
+        var gpsData = new GpsData { DeviceId = deviceId };
+        var hasValidData = false;
+
+        foreach (var sentence in nmeaSentences)
+        {
+            if (string.IsNullOrWhiteSpace(sentence))
+                continue;
+
+            try
+            {
+                var parsedData = await ParseSingleSentenceAsync(sentence, deviceId);
+                if (parsedData != null)
+                {
+                    MergeGpsData(gpsData, parsedData);
+                    hasValidData = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger?.LogWarning(ex, "Failed to parse NMEA sentence: {Sentence}", sentence);
+            }
+        }
+
+        return hasValidData ? gpsData : null;
+    }
+
+    public async Task<GpsData?> ParseSingleSentenceAsync(string nmeaSentence, string deviceId)
+    {
+        if (string.IsNullOrWhiteSpace(nmeaSentence) || !nmeaSentence.StartsWith("$"))
+            return null;
+
+        try
+        {
+            // Validate checksum first
+            if (!IsValidNmeaChecksum(nmeaSentence))
+            {
+                _logger?.LogWarning("Invalid NMEA checksum for sentence: {Sentence}", nmeaSentence);
+                return null;
+            }
+
+            var message = NmeaMessage.Parse(nmeaSentence);
+            return await ConvertToGpsDataAsync(message, deviceId);
+        }
+        catch (Exception ex)
+        {
+            _logger?.LogError(ex, "Error parsing NMEA sentence: {Sentence}", nmeaSentence);
+            return null;
+        }
+    }
+
+    private async Task<GpsData?> ConvertToGpsDataAsync(NmeaMessage message, string deviceId)
+    {
+        await Task.CompletedTask; // Make method async for consistency
+
+        var gpsData = new GpsData { DeviceId = deviceId };
+
+        switch (message)
+        {
+            case Rmc rmc:
+                return ProcessRmc(rmc, gpsData);
+            case Gga gga:
+                return ProcessGga(gga, gpsData);
+            case Gsv gsv:
+                return ProcessGsv(gsv, gpsData);
+            case Gsa gsa:
+                return ProcessGsa(gsa, gpsData);
+            default:
+                _logger?.LogDebug("Unsupported NMEA message type: {MessageType}", message.MessageType);
+                return null;
+        }
+    }
+
+    private GpsData? ProcessRmc(Rmc rmc, GpsData gpsData)
+    {
+        if (rmc.Active == false)
+        {
+            _logger?.LogDebug("GPRMC message indicates invalid fix");
+            return null;
+        }
+
+        gpsData.Latitude = rmc.Latitude;
+        gpsData.Longitude = rmc.Longitude;
+        gpsData.Speed = rmc.Speed;
+        gpsData.Heading = rmc.Course;
+        
+        if (rmc.FixTime.HasValue)
+        {
+            gpsData.Timestamp = rmc.FixTime.Value;
+        }
+        else
+        {
+            gpsData.Timestamp = DateTime.UtcNow;
+        }
+
+        gpsData.ExtendedData["MessageType"] = "GPRMC";
+        gpsData.ExtendedData["Active"] = rmc.Active;
+        gpsData.ExtendedData["MagneticVariation"] = rmc.MagneticVariation;
+
+        return gpsData;
+    }
+
+    private GpsData? ProcessGga(Gga gga, GpsData gpsData)
+    {
+        if (gga.Quality == 0)
+        {
+            _logger?.LogDebug("GPGGA message indicates invalid fix");
+            return null;
+        }
+
+        gpsData.Latitude = gga.Latitude;
+        gpsData.Longitude = gga.Longitude;
+        gpsData.Altitude = gga.Altitude;
+        gpsData.SatelliteCount = gga.NumberOfSatellites;
+        gpsData.Hdop = gga.Hdop;
+        
+        if (gga.FixTime.HasValue)
+        {
+            gpsData.Timestamp = gga.FixTime.Value;
+        }
+        else
+        {
+            gpsData.Timestamp = DateTime.UtcNow;
+        }
+
+        gpsData.ExtendedData["MessageType"] = "GPGGA";
+        gpsData.ExtendedData["Quality"] = gga.Quality;
+        gpsData.ExtendedData["GeoidalSeparation"] = gga.GeoidalSeparation;
+        gpsData.ExtendedData["DgpsStationId"] = gga.DgpsStationId;
+
+        return gpsData;
+    }
+
+    private GpsData ProcessGsv(Gsv gsv, GpsData gpsData)
+    {
+        gpsData.Timestamp = DateTime.UtcNow;
+        
+        gpsData.ExtendedData["MessageType"] = "GPGSV";
+        gpsData.ExtendedData["SatellitesInView"] = gsv.SatellitesInView;
+        gpsData.ExtendedData["TotalMessages"] = gsv.TotalMessages;
+        gpsData.ExtendedData["MessageNumber"] = gsv.MessageNumber;
+        
+        // Store satellite information
+        var satellites = new List<object>();
+        foreach (var satellite in gsv.Satellites)
+        {
+            satellites.Add(new
+            {
+                PrnNumber = satellite.PrnNumber,
+                Elevation = satellite.Elevation,
+                Azimuth = satellite.Azimuth,
+                SignalToNoiseRatio = satellite.SignalToNoiseRatio
+            });
+        }
+        gpsData.ExtendedData["Satellites"] = satellites;
+
+        return gpsData;
+    }
+
+    private GpsData ProcessGsa(Gsa gsa, GpsData gpsData)
+    {
+        gpsData.Timestamp = DateTime.UtcNow;
+        
+        if (gsa.Hdop.HasValue)
+        {
+            gpsData.Hdop = gsa.Hdop.Value;
+        }
+
+        gpsData.ExtendedData["MessageType"] = "GPGSA";
+        gpsData.ExtendedData["SelectionMode"] = gsa.SelectionMode.ToString();
+        gpsData.ExtendedData["Mode"] = gsa.Mode.ToString();
+        gpsData.ExtendedData["Pdop"] = gsa.Pdop;
+        gpsData.ExtendedData["Vdop"] = gsa.Vdop;
+        gpsData.ExtendedData["SatellitePrns"] = gsa.SatellitePrns?.ToList();
+
+        return gpsData;
+    }
+
+    private void MergeGpsData(GpsData target, GpsData source)
+    {
+        // Update target with non-null/non-default values from source
+        if (source.Latitude != 0)
+            target.Latitude = source.Latitude;
+        
+        if (source.Longitude != 0)
+            target.Longitude = source.Longitude;
+        
+        if (source.Speed.HasValue)
+            target.Speed = source.Speed;
+        
+        if (source.Heading.HasValue)
+            target.Heading = source.Heading;
+        
+        if (source.Altitude.HasValue)
+            target.Altitude = source.Altitude;
+        
+        if (source.SatelliteCount.HasValue)
+            target.SatelliteCount = source.SatelliteCount;
+        
+        if (source.Hdop.HasValue)
+            target.Hdop = source.Hdop;
+        
+        if (source.Timestamp != default && source.Timestamp > target.Timestamp)
+            target.Timestamp = source.Timestamp;
+
+        // Merge extended data
+        foreach (var kvp in source.ExtendedData)
+        {
+            target.ExtendedData[kvp.Key] = kvp.Value;
+        }
+    }
+
+    public static string NormalizeCoordinates(double latitude, double longitude)
+    {
+        // Ensure coordinates are within valid ranges
+        latitude = Math.Max(-90.0, Math.Min(90.0, latitude));
+        longitude = Math.Max(-180.0, Math.Min(180.0, longitude));
+        
+        return $"{latitude:F6},{longitude:F6}";
+    }
+
+    public static DateTime ConvertToUtc(DateTime timestamp, TimeZoneInfo? timeZone = null)
+    {
+        if (timestamp.Kind == DateTimeKind.Utc)
+            return timestamp;
+
+        if (timeZone != null)
+        {
+            return TimeZoneInfo.ConvertTimeToUtc(timestamp, timeZone);
+        }
+
+        // Assume local time if no timezone specified
+        return timestamp.Kind == DateTimeKind.Local ? 
+            timestamp.ToUniversalTime() : 
+            DateTime.SpecifyKind(timestamp, DateTimeKind.Utc);
+    }
+}

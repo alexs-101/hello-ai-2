@@ -1,0 +1,210 @@
+using Core.Interfaces;
+using Core.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using NmeaParser;
+using NmeaParser.Messages;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+using CoreValidationResult = Core.Models.ValidationResult;
+
+namespace NmeaPlugin;
+
+public class NmeaProtocolPlugin : IProtocolPlugin
+{
+    private readonly ILogger<NmeaProtocolPlugin>? _logger;
+    private StreamDevice? _device;
+    private readonly object _lock = new();
+    private bool _initialized = false;
+
+    public string Name => "NMEA 0183 Protocol Plugin";
+    public string Version => "1.0.0";
+    public ProtocolType SupportedProtocol => ProtocolType.Nmea;
+
+    public NmeaProtocolPlugin()
+    {
+    }
+
+    public NmeaProtocolPlugin(ILogger<NmeaProtocolPlugin> logger)
+    {
+        _logger = logger;
+    }
+
+    public Task InitializeAsync(IConfiguration config)
+    {
+        lock (_lock)
+        {
+            if (_initialized)
+                return Task.CompletedTask;
+
+            _device = new StreamDevice(new MemoryStream());
+            _initialized = true;
+            
+            _logger?.LogInformation("NMEA Protocol Plugin initialized");
+            return Task.CompletedTask;
+        }
+    }
+
+    public Task<bool> CanHandleAsync(byte[] data)
+    {
+        if (data == null || data.Length == 0)
+            return Task.FromResult(false);
+
+        try
+        {
+            var text = Encoding.ASCII.GetString(data).Trim();
+            
+            // NMEA sentences start with $ and end with CR/LF
+            var isNmea = text.StartsWith("$") && 
+                        (text.Contains("\r\n") || text.Contains("\n") || text.Contains("\r") || text.EndsWith("*"));
+            
+            return Task.FromResult(isNmea);
+        }
+        catch
+        {
+            return Task.FromResult(false);
+        }
+    }
+
+    public async Task<GpsData> ProcessAsync(byte[] data, string deviceId)
+    {
+        if (!_initialized)
+        {
+            throw new InvalidOperationException("Plugin not initialized");
+        }
+
+        var text = Encoding.ASCII.GetString(data).Trim();
+        var gpsData = new GpsData { DeviceId = deviceId };
+
+        try
+        {
+            // Parse NMEA sentences
+            var lines = text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            
+            foreach (var line in lines)
+            {
+                if (string.IsNullOrWhiteSpace(line) || !line.StartsWith("$"))
+                    continue;
+
+                try
+                {
+                    var message = NmeaMessage.Parse(line);
+                    await ProcessNmeaMessage(message, gpsData);
+                }
+                catch (Exception ex)
+                {
+                    _logger?.LogWarning(ex, "Failed to parse NMEA sentence: {Sentence}", line);
+                }
+            }
+
+            // Set timestamp if not already set
+            if (gpsData.Timestamp == default)
+            {
+                gpsData.Timestamp = DateTime.UtcNow;
+            }
+
+            return gpsData;
+        }
+        catch (Exception ex)
+        {
+            _logger?.LogError(ex, "Error processing NMEA data for device {DeviceId}", deviceId);
+            throw;
+        }
+    }
+
+    private async Task ProcessNmeaMessage(NmeaMessage message, GpsData gpsData)
+    {
+        await Task.CompletedTask; // Make method async for future extensibility
+
+        switch (message)
+        {
+            case Rmc rmc when rmc.Active:
+                gpsData.Latitude = rmc.Latitude;
+                gpsData.Longitude = rmc.Longitude;
+                gpsData.Speed = rmc.Speed;
+                gpsData.Heading = rmc.Course;
+                if (rmc.FixTime.HasValue)
+                {
+                    gpsData.Timestamp = rmc.FixTime.Value;
+                }
+                gpsData.ExtendedData["Active"] = rmc.Active;
+                break;
+
+            case Gga gga when gga.Quality > 0:
+                gpsData.Latitude = gga.Latitude;
+                gpsData.Longitude = gga.Longitude;
+                gpsData.Altitude = gga.Altitude;
+                gpsData.SatelliteCount = gga.NumberOfSatellites;
+                gpsData.Hdop = gga.Hdop;
+                if (gga.FixTime.HasValue)
+                {
+                    gpsData.Timestamp = gga.FixTime.Value;
+                }
+                gpsData.ExtendedData["Quality"] = gga.Quality;
+                gpsData.ExtendedData["GeoidalSeparation"] = gga.GeoidalSeparation;
+                break;
+
+            case Gsv gsv:
+                gpsData.ExtendedData["SatellitesInView"] = gsv.SatellitesInView;
+                gpsData.ExtendedData["TotalMessages"] = gsv.TotalMessages;
+                gpsData.ExtendedData["MessageNumber"] = gsv.MessageNumber;
+                break;
+
+            case Gsa gsa:
+                gpsData.ExtendedData["Mode"] = gsa.Mode;
+                gpsData.ExtendedData["Pdop"] = gsa.Pdop;
+                gpsData.ExtendedData["Vdop"] = gsa.Vdop;
+                if (gsa.Hdop.HasValue)
+                {
+                    gpsData.Hdop = gsa.Hdop.Value;
+                }
+                break;
+
+            default:
+                // Store unknown message types in extended data
+                gpsData.ExtendedData[$"Unknown_{message.MessageType}"] = message.ToString();
+                break;
+        }
+    }
+
+    public Task<CoreValidationResult> ValidateAsync(GpsData data)
+    {
+        var result = new CoreValidationResult { IsValid = true };
+        var context = new ValidationContext(data);
+        var validationResults = new List<System.ComponentModel.DataAnnotations.ValidationResult>();
+
+        if (!Validator.TryValidateObject(data, context, validationResults, true))
+        {
+            result.IsValid = false;
+            result.Errors.AddRange(validationResults.Select(vr => vr.ErrorMessage ?? "Unknown validation error"));
+        }
+
+        // Additional NMEA-specific validation
+        if (data.Latitude == 0 && data.Longitude == 0)
+        {
+            result.IsValid = false;
+            result.Errors.Add("GPS coordinates cannot both be zero (invalid fix)");
+        }
+
+        if (data.Timestamp < DateTime.UtcNow.AddDays(-1) || data.Timestamp > DateTime.UtcNow.AddHours(1))
+        {
+            result.IsValid = false;
+            result.Errors.Add("GPS timestamp is outside acceptable range");
+        }
+
+        return Task.FromResult(result);
+    }
+
+    public Task CleanupAsync()
+    {
+        lock (_lock)
+        {
+            _device?.Dispose();
+            _device = null;
+            _initialized = false;
+            
+            _logger?.LogInformation("NMEA Protocol Plugin cleaned up");
+            return Task.CompletedTask;
+        }
+    }
+}

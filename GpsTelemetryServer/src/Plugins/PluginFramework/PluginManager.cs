@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace PluginFramework;
 
-public class PluginManager : IDisposable
+public class PluginManager : IPluginManager, IDisposable
 {
     private readonly ILogger<PluginManager> _logger;
     private readonly IConfiguration _configuration;
